@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using vzlet.Services;
 using Xamarin.Forms;
 
 namespace vzlet
@@ -13,6 +14,8 @@ namespace vzlet
         public MainPage()
         {
             InitializeComponent();
+
+            rockets.ItemsSource = (System.Collections.IEnumerable)DataService.ReturnRockets("https://fdo.rocketlaunch.live/json/launches/next/5");
         }
     }
 }

@@ -5,6 +5,17 @@
 
     <StackLayout>
         <Label Text="Vzlet"/>
+        <CollectionView x:Name="rockets">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Label Text="{Binding name}"/>
+                        <Label Text="{Binding providerName}"/>
+                        <Label Text="{Binding winOpen}"/>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
     </StackLayout>
 
 </ContentPage>

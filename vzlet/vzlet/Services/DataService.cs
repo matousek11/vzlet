@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using System.Text.Json;
+using System.Threading.Tasks;
 using vzlet.Models;
 
 namespace vzlet.Services
@@ -10,7 +11,7 @@ namespace vzlet.Services
     class DataService
     {
         
-        public static async void ReturnRockets(string url)
+        public static async Task<List<RocketLaunchModel>> ReturnRockets(string url)
         {
             string jsonString = "";
             using (HttpClient httpClient = new HttpClient())
@@ -19,9 +20,9 @@ namespace vzlet.Services
                 if (response.IsSuccessStatusCode)
                     jsonString = await response.Content.ReadAsStringAsync();
                 else
-                    return;
+                    return new List<RocketLaunchModel>();
             }
-            ParseRockets(jsonString);
+            return ParseRockets(jsonString);
         }
 
         private static List<RocketLaunchModel> ParseRockets(string jsonString)
