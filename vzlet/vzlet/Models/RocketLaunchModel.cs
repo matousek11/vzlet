@@ -8,14 +8,14 @@ namespace vzlet.Models
     {
         public int id;
         public string name;
-        public int company_id;
-        public string slug;
-        public RocketLaunchModel(int id, string name, int company_id, string slug)
+        public string provider_name;
+        public string win_open;
+        public RocketLaunchModel(int id, string name, string provider_name, string win_open)
         {
             this.id = id;
             this.name = name;
-            this.company_id = company_id;
-            this.slug = slug;
+            this.provider_name = provider_name;
+            this.win_open = win_open;
         }
     }
 }
