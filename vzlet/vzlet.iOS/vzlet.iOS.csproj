@@ -133,4 +133,7 @@
       <Name>vzlet</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\launcher.png" />
+  </ItemGroup>
 </Project>

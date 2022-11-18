@@ -11,24 +11,20 @@ namespace vzlet.Services
     class DataService
     {
         
-        public static async Task<List<RocketLaunchModel>> ReturnRockets(string url)
+        public static async Task<List<RocketLaunchModel>> ReturnRockets()
         {
             string jsonString = "";
             using (HttpClient httpClient = new HttpClient())
             {
-                HttpResponseMessage response = await httpClient.GetAsync(url);
+                HttpResponseMessage response = httpClient.GetAsync("https://fdo.rocketlaunch.live/json/launches/next/5").ConfigureAwait(false).GetAwaiter().GetResult();
                 if (response.IsSuccessStatusCode)
                     jsonString = await response.Content.ReadAsStringAsync();
                 else
-                    return new List<RocketLaunchModel>();
+                    return null;
             }
-            return ParseRockets(jsonString);
-        }
-
-        private static List<RocketLaunchModel> ParseRockets(string jsonString)
-        {
             List<RocketLaunchModel> rockets = new List<RocketLaunchModel>();
             JsonDocument jsonDocument = JsonDocument.Parse(jsonString);
+
             foreach (JsonElement rocket in jsonDocument.RootElement.GetProperty("result").EnumerateArray())
             {
                 int id = (int)rocket.GetProperty("id").GetDouble();

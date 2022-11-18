@@ -6,16 +6,16 @@ namespace vzlet.Models
 {
     class RocketLaunchModel
     {
-        public int id;
-        public string name;
-        public string providerName;
-        public string winOpen;
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string ProviderName { get; set; }
+        public string WinOpen { get; set; }
         public RocketLaunchModel(int id, string name, string providerName, string winOpen)
         {
-            this.id = id;
-            this.name = name;
-            this.providerName = providerName;
-            this.winOpen = winOpen;
+            Id = id;
+            Name = name;
+            ProviderName = providerName;
+            WinOpen = winOpen;
         }
     }
 }
