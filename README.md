@@ -1,14 +1,14 @@
 # Lift off
 
 ## Table of contents
-* [About](#general-info)
+* [About](#about)
 * [Technologies](#technologies)
 * [Setup](#setup)
 
 ## About
 Lift off app is showing next 5 rocket launches with mission name, company name and time of launch. Using [Rocket launch API](https://www.rocketlaunch.live/api)
-<p>
-  <img src="vzlet1.jpg"/>
+<p align="center">
+  <img src="vzlet1.jpg" width= "30%"/>
 </p>
 
 ## Technologies
