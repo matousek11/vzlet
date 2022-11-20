@@ -7,7 +7,7 @@
 
 ## About
 Lift off app is showing next 5 rocket launches with mission name, company name and time of launch. Using [Rocket launch API](https://www.rocketlaunch.live/api)
-![WakeMeHere screenshot](/vzlet1.png)
+![Lift off screenshot](/vzlet1.jpg)
 
 ## Technologies
 - Xamarin
