@@ -19,8 +19,8 @@
                             <Image Source="launcher" Grid.Column="0"/>
                             <StackLayout  Grid.Column="1">
                                 <Label Text="{Binding Name}" TextColor="Black" FontSize="24"/>
-                                    <Label Text="{Binding ProviderName, StringFormat='Společnost: {0}'}" Margin="0, -2, 0, 0"/>
-                                <Label Text="{Binding WinOpen, StringFormat='Čas startu: {0}'}" Margin="0, -5, 0, 5"/>
+                                    <Label Text="{Binding ProviderName, StringFormat='Společnost: {0}'}" Margin="0, -2, 0, 0" TextColor="Gray"/>
+                                <Label Text="{Binding WinOpen, StringFormat='Čas startu: {0}'}" Margin="0, -5, 0, 5" TextColor="Gray"/>
                             </StackLayout>
                         </Grid>
                         </Frame>

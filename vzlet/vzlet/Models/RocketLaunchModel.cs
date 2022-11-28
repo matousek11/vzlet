@@ -12,10 +12,10 @@ namespace vzlet.Models
         public string WinOpen { get; set; }
         public RocketLaunchModel(int id, string name, string providerName, string winOpen)
         {
-            Id = id;
-            Name = name;
-            ProviderName = providerName;
-            WinOpen = winOpen;
+            this.Id = id;
+            this.Name = name;
+            this.ProviderName = providerName;
+            this.WinOpen = winOpen;
         }
     }
 }
